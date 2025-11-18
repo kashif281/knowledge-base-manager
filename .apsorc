@@ -1,0 +1,51 @@
+{
+  "entities": [
+    {
+      "name": "Category",
+      "created_at": false,
+      "updated_at": false,
+      "fields": [
+        {
+          "name": "name",
+          "type": "varchar",
+          "nullable": false,
+          "isIndex": true,
+          "isUnique": true
+        }
+      ],
+      "indexes": [],
+      "uniques": []
+    },
+    {
+      "name": "Article",
+      "created_at": false,
+      "updated_at": false,
+      "fields": [
+        {
+          "name": "title",
+          "type": "varchar",
+          "nullable": false,
+          "isIndex": false,
+          "isUnique": false
+        },
+        {
+          "name": "content",
+          "type": "text",
+          "nullable": false,
+          "isIndex": false,
+          "isUnique": false
+        }
+      ],
+      "indexes": [],
+      "uniques": []
+    }
+  ],
+  "relationships": [
+    {
+      "from": "Category",
+      "to": "Article",
+      "type": "OneToMany"
+    }
+  ],
+  "_removedEntities": []
+}
